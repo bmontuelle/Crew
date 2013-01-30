@@ -10,10 +10,10 @@ if [ ! -d "$CUR_DIR/.git" ]; then
   exit 1
 fi
 
-CREW_PROJECT_ID=1
+CREW_PROJECT_ID=9
 BRANCH_TO_REVIEW=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 BASE_BRANCH=master
-CREW_SERVER=http://crew
+CREW_SERVER=http://crew.localhost
 
 function usage {
   echo "$SCRIPT_NAME ($SCRIPT_VERSION), $SCRIPT_SHORT_DESC."
